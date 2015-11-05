@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+        body,img,div,span,h1,p,a{padding: 0;margin: 0;text-decoration: none}
+        #game{max-width: 640px;width: 100%;margin: 0 auto;background-color: #68cdd5;}
+        .heading{width: 100%;font-family: "Hiragino Sans GB W3";color: #fff;background: #22292c;position: relative;}
+        .headingLeft{width: 15%; position: absolute;left: 2.65%; top: 13%; }
+        .headingLeft img{width: 22.9%;max-width: 24px;}
+        .headingLeft a{width: 100%;font-size:1.625em; position: absolute;top: 13%; left: 30%; color: #fff; display: inline-block;}
+        .heading h1{font-size: 2.125em;padding: 2% 0 2.5%; font-weight: normal; text-align: center;}
+        .headingRight{width: 5.8%;position: absolute;right: 2.82%;top: 13%;}
+        .headingRight img{width: 100%;max-width: 41px;}
+        .main{width: 100%;position: relative; text-align: center;}
+        .back{width: 8.44%;max-width: 54px;position: absolute;left: 5.5%; margin-top: 3.125%;}
+        .logo{width: 28.28%;max-width: 181px;margin-top: 18.125%;}
+        .introduce{width: 70.78%; max-width: 453px; margin: 15% auto 0;font-size: 1.875em;color: #fff;text-align: left;line-height: 200%;}
+        .vote{width: 100%;padding-bottom: 45%; margin-top: 30%;color: #fff;font-size: 1.5em;}
+        .contact{width: 50%;float: left;}
+        .contact img{width: 26.8%;max-width: 86px;}
+        .ptteng{width: 50%;float: left;}
+        .ptteng img{width: 26.25%;max-width: 84px;}
+
+        @media screen and (max-width:480px) {
+            #game{font-size: 60%;}
+        }
+    </style>
+</head>
+<body>
+<div id="game">
+    <div class="heading">
+        <div class="headingLeft"><img src="images/arrow.png" /><a href="#">返回</a></div>
+        <h1>魔镜</h1>
+        <div class="headingRight"><img src="images/more.png" /></div>
+    </div>
+    <div class="main">
+        <img class="back" src="images/back.png" />
+        <img class="logo" src="images/logo.png" />
+        <p class="introduce">葡萄藤轻游戏专注于桌游领域，提供在线杀人游戏，捉鬼，炸狼堡等多种聚会游戏，以及线下聚会桌游道具。</p>
+        <div class="vote">
+            <div class="contact"><img src="images/contact.png" /><p>290560933</p></div>
+            <div class="ptteng"><img src="images/ptteng.png" /><p>BJPTTeng</p></div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
