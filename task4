@@ -2,13 +2,100 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>游戏结果</title>
     <style type="text/css">
-
+        body,ul,li,p,img,span,h1{margin: 0;padding: 0; list-style: none;}
+        #gameResult{width: 100%;max-width: 640px;margin: 0 auto;font-family: "HiraginoSansGB W3";font-weight: normal;font-size: 100%;}
+        .header{width: 100%;background-color: #29bde0;border-bottom: 1px solid #fff;position: relative;}
+        .header img:first-child{width: 7.97%;max-width: 51px;position: absolute;left: 3.125%;top: 20%;}
+        .header img:last-child{width: 6.25%;max-width: 40px;position: absolute;right: 3.125%;top: 20%;}
+        .header h1{font-size: 2.125em;color: #fff;font-weight: normal;padding: 2.34% 0;text-align: center;}
+        .main{width: 100%;background-color: #29bde0;position: relative;}
+        .main img{width: 54.4%;max-width: 348px;margin: 3.85% 22.8% 0;}
+        .result{width: 77%;max-width: 492px;color: #ffc865;font-size: 2.0625em;margin: 3% 0 0 11.5%;}
+        .detail{width: 77%;max-width: 492px;color: #fff;font-size: 1.625em;margin: 8.6% 0 0 11.5%;}
+        .detail ul{width: 100%; display: inline-block;}
+        .detail li{width: 33%; float: left;}
+        .content{width: 100%;background-color: #fff;}
+        .content li{border-top: 0.125em solid #ccc;}
+        .content .date{width: 77%;margin: 3% 0 0 11.5%;}
+        .content h1{color: #515151; font-size: 1.875em;}
+        .content hr{color: #ccc;width:100%}
+        .content span{color: #c7c7c7;font-size: 67%;float: right;}
+        .content p{color: #a6a6a6; font-size: 1.625em;}
+        .nothing{width: 100%;max-width: 640px; background-color: #fff;}
+        .footer{width: 100%;max-width: 640px; padding: 4% 0;position: fixed; bottom: 0;background: rgba(41,189,224,0.6); color: #fff;}
+        .footer div{width: 35%;font-size: 2.5em;line-height: 200%;text-align:center;border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;}
+        .again{float: left;margin-left: 10%;background-color: #f66f6f;}
+        .share{float: right;margin-right: 10%;background-color: #fbb435;}
+        @media screen and (max-width:480px){
+            #gameResult{font-size: 60%;}
+        }
     </style>
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            var no=document.getElementsByClassName("nothing")[0];
+            var fo=document.getElementsByClassName("footer")[0];
+            no.style.height=fo.offsetHeight+'px';
+        }
+    </script>
 </head>
 <body>
-
+<div id="gameResult">
+    <div class="header">
+        <img src="images/home.png" />
+        <h1>游戏结果</h1>
+        <img src="images/information.png" />
+    </div>
+    <div class="main">
+        <img src="images/result.png" />
+        <div class="result">太棒了!你知道么？在捉鬼游戏中只有20%的卧底取得游戏最终的胜利哦！</div>
+        <div class="detail">
+            <p>本次游戏共计用时0小时25分钟</p>
+            <ul>
+                <li>杀&emsp;手0人</li>
+                <li>警&emsp;察1人</li>
+                <li>平&emsp;民6人</li>
+                <li>狙击手1人</li>
+                <li>医&emsp;生1人</li>
+            </ul>
+            <p>卧底词汇：爱新觉罗</p>
+            <p>水民词汇：努尔哈赤</p>
+            <br/>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="date">
+                        <h1>第1天<span>0小时07分</span></h1><br/>
+                        <p>晚上：5号被杀手杀死，5号是水民</p>
+                        <p>白天：8号被全民投票投死，8号是杀手</p><br/>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">
+                        <h1>第2天<span>0小时07分</span></h1><br/>
+                        <p>晚上：5号被杀手杀死，5号是水民</p>
+                        <p>白天：8号被全民投票投死，8号是杀手</p><br/>
+                    </div>
+                </li>
+                <li>
+                    <div class="date">
+                        <h1>第3天<span>0小时07分</span></h1><br/>
+                        <p>晚上：5号被杀手杀死，5号是水民</p>
+                        <p>白天：8号被全民投票投死，8号是杀手</p><br/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="nothing"></div>
+    <div class="footer">
+        <div class="again">再来一局</div>
+        <div class="share">上传并分享</div>
+    </div>
+</div>
 </body>
 </html>
