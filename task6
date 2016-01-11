@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>投票</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            var no=document.getElementsByClassName("nothing")[0];
+            var fo=document.getElementsByClassName("footer")[0];
+            no.style.height=fo.offsetHeight+'px';
+
+        }
+        function play_pause(){
+            var pl=document.getElementById("play");
+            var mus=document.getElementById("mp3")
+            if(mus.paused) {mus.play();}
+            else {mus.pause();}
+
+        }
+    </script>
+</head>
+<body>
+<div id="vote">
+    <div class="header">
+        <i class="page"></i>
+        <h1>投票</h1>
+        <i class="close"></i>
+    </div>
+    <div class="main">
+        <div class="music">
+            <p>发言讨论结束，大家请投票</p>
+            <a id="play" href="javascript:play_pause();" target="_self"><i class="play"></i></a>
+            <audio id="mp3" src="music/ButterFly.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+        </div>
+        <div class="chose">
+            <div class="triangle"></div>
+            <p>点击得票数最多人的头像</p>
+            <ul>
+                <li>
+                    <div>水民</div>
+                    <div>1号</div>
+                </li>
+                <div id="option">
+                    <i class="vote1"></i>
+                    <i class="vote2"></i>
+                    <i class="vote3"></i>
+                    <i class="vote4"></i>
+                </div>
+                <li>
+                    <div>水民</div>
+                    <div>2号</div>
+                </li>
+                <li>
+                    <div>警察</div>
+                    <div>3号</div>
+                </li>
+                <li>
+                    <div>法官</div>
+                    <div>4号</div>
+                </li>
+                <li>
+                    <div>狙击手</div>
+                    <div>5号</div>
+                </li>
+                <li>
+                    <div>医生</div>
+                    <div>6号</div>
+                </li>
+                <li>
+                    <div>杀手</div>
+                    <div>7号</div>
+                </li>
+                <li>
+                    <div>水民</div>
+                    <div>8号</div>
+                </li>
+                <li>
+                    <div>水民</div>
+                    <div>9号</div>
+                </li>
+            </ul>
+        </div>
+        <div class="nothing"></div>
+        <div class="footer">
+            <div class="btn">
+                <p>投死</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
