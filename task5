@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>首页</title>
+    <style type="text/css">
+        body,img,ul,li,p{padding: 0;margin: 0;list-style: none;font-family: "HiraginoSansGB W3";}
+        @font-face {
+            font-family: "HiraginoSansGB W3";
+            src: url('font/Hiragino%20Sans%20GB%20W3.otf');
+        }
+        #homePage{width: 100%;max-width: 640px;margin: 0 auto;position: relative;overflow: hidden;}
+        #home{z-index: 1;position: absolute;top: 0;left: 0;width: 100%;max-width: 640px;}
+        /*#hide{z-index: 3;position: absolute;top: 0;background-color: #fff;}*/
+        .header{width: 100%;background-color: #29bde0;}
+        .header img{width: 5.3%;max-width: 34px;padding: 3.28% 3.44%;cursor: pointer;}
+        .main{width: 100%; text-align: center;background-color: #f0f0f0;font-weight: normal;padding: 3.28% 0 9.6875%;}
+        .before{width: 88.75%;max-width: 568px;border: thin solid #c9c9c9;margin: 0 5.625%;background-color: #fff;line-height: 400%;font-size: 2.125em;color: #9a9a9a;position: relative;}
+        .before img{width: 5.1%; max-width: 29px;position: absolute;right:2.5%;top:37%;}
+        .main .detail{width: 88.75%;border: thin solid #c9c9c9;margin: 3.28% 5.625% 0;background-color: #fff;position: relative;}
+        .gameType{color: #fbb435; font-size: 2.3em; border-bottom: thin solid #fbb435;line-height: 300%;}
+        .detail ul{width: 81.2%;padding: 3.28% 9.4% 3.28%;}
+        .detail li .edition{width:100%;background-color: #69d1e9;color: #fff;font-size: 2em;line-height: 400%;}
+        .detail li p{font-size: 1.5em;color: #787878;line-height: 300%;}
+        .detail #next{width: 4.375%;max-width: 28px;position: absolute;right: 1.56%;top: 49%}
+        .detail #more{width: 14.53%;max-width: 93px;position: absolute;bottom: 1.4%;left: 42.735%;}
+        #menu{width: 75%;max-width: 480px;z-index: 0;position: relative;top: 0;left: 0;}
+        #menu li{position: relative;border-bottom: thin solid #ccc;padding: 8.33% 0;}
+        #menu li p{font-size: 1.875em;color: #29bde0;position: absolute; top: 23%;left: 21.5%;}
+        #menu li img:first-child{width: 8.33%;max-width: 40px;position: absolute; top: 26%;left: 7.1%;}
+        #menu li img:last-child{width: 8.33%;max-width: 40px;position: absolute; top: 26%;right: 9.375%;}
+        @media screen and (max-width:480px) {
+            body{font-size:60%;}
+        }
+    </style>
+    <script src="move.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            var Home=document.getElementById("home");
+            var Menu=document.getElementById("menu");
+            var oBtn=document.getElementById("btn");
+            /*var Hide=document.getElementById("hide");*/
+            var distance=Home.offsetWidth*0.75;
+            Menu.style.height=Home.offsetHeight+'px';
+            /*Hide.style.left=Home.offsetWidth+'px';
+            Hide.style.width=distance+'px';
+            Hide.style.height=Home.offsetHeight+'px';*/
+            var i=1;
+            oBtn.onclick=function()
+            {
+                if(i%2==1)
+                {
+                    startMove(Home,{left:distance},0.2);
+                }
+                if(i%2==0)
+                {
+                    startMove(Home,{left:0},0.2);
+                }
+                i++;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="homePage">
+    <div id="home">
+        <div class="header">
+            <img id="btn" src="images/menu.png">
+        </div>
+        <div class="main">
+            <div class="before">
+                <p>上次游戏：捉鬼猜词版</p>
+                <img src="images/arrow.png" />
+            </div>
+            <div class="detail">
+                <div class="gameType">捉鬼游戏</div>
+                <ul>
+                    <li>
+                        <div class="edition">简化版</div>
+                        <p>有1133个用户正在玩此款游戏</p>
+                    </li>
+                    <li>
+                        <div class="edition">猜词版</div>
+                        <p>有1133个用户正在玩此款游戏</p>
+                    </li>
+                    <li>
+                        <div class="edition">白痴版</div>
+                        <p>有1133个用户正在玩此款游戏</p>
+                    </li>
+                </ul>
+                <img id="next" src="images/triangle.png" />
+                <img id="more" src="images/points.png" />
+            </div>
+        </div>
+    </div>
+    <!--<div id="hide"></div>-->
+    <div id="menu">
+        <ul>
+            <li>
+                <img src="images/public.png" />
+                <p>公告</p>
+                <img src="images/more.png" />
+            </li>
+            <li>
+                <img src="images/setting.png" />
+                <p>设置</p>
+                <img src="images/more.png" />
+            </li>
+            <li>
+                <img src="images/help.png" />
+                <p>帮助</p>
+                <img src="images/more.png" />
+            </li>
+            <li>
+                <img src="images/about.png" />
+                <p>关于</p>
+                <img src="images/more.png" />
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
